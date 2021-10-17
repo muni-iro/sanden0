@@ -1,0 +1,193 @@
+.more-btn_wrapp{
+    margin-top: 50px;
+    background-color: $textColor;
+    box-sizing: border-box;
+    width: 260px;
+    
+    .more-btn{
+        display: block;
+        height: 48px;
+        text-align: center;
+        position: relative;
+        
+        span{
+            display: block;
+            color: #fff;
+            line-height: 48px;
+            transition: ease .4s;
+            z-index: 1;
+            position: relative;
+            
+            &:after{
+                display: inline-block;
+                content: '';
+                width: 10px;
+                height: 10px;
+                border-top: 2px solid $mainColor;
+                border-right: 2px solid $mainColor;
+                transform: translateX(30px) rotate(45deg);
+                transition: $easing .4s;
+            }
+            &:before{
+                display: block;
+                content: '';
+                width: 0%;
+                height: 100%;
+                background-color: $bgc;
+                color: $textColor;
+                position: absolute;
+                top: 0;
+                right: 0;
+                transition: $easing .4s;
+                z-index: -1;
+            }
+        }
+        
+        &:hover{
+                
+            span{
+                color: $textColor;
+                opacity: 1;
+                
+                &::after{
+                    transform: translateX(40px) rotate(45deg);
+                    opacity: 1;
+                }
+                &::before{
+                    width: 100%;
+                    left: 0;
+                }
+            }
+        }
+
+        button{
+            padding: 0;
+            width: 100%;
+            appearance: none;
+            background-color: transparent;
+            border: none;
+            font-size: 1.6rem;
+            letter-spacing: 0.2em;
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (max-width: 519px) {
+        width: 100%;
+
+    }
+}
+.news .more-btn_wrapp{
+    transition: $easing 1s .7s;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+.works .more-btn_wrapp{
+    transition: $easing 1s .2s;
+    opacity: 0;
+    transform: translateX(-20px);
+
+}
+// ========================================================
+
+.pagenation_wrapp{
+    margin-top: 100px;
+    
+    .pagenation{
+        display: flex;
+        list-style: none;
+        justify-content: center;
+
+        li{
+            &:not(:first-of-type){
+                margin-left: 13px;
+            }
+
+            a{
+                display: block;
+                width: 32px;
+                height: 32px;
+                color: $textColor;
+                line-height: 32px;
+                text-align: center;
+                border: solid 1px $textColor;
+                border-radius: 50%;
+                box-sizing: border-box;
+                transition: $easing .3s;
+
+                &:hover{
+                    background-color: $bgc;
+                }
+            }
+
+            .current{
+                background-color: $textColor;
+                color: #fff;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+
+// .contact-btn_wrapp{
+//     box-sizing: border-box;
+//     width: 100%;
+//     background-color: $accentColor;
+
+//     .contact-btn{
+//         display: block;
+//         height: 167px;
+//         text-align: center;
+//         position: relative;
+
+        
+//         .contact-btn_ttl{
+//             display: block;
+//             font-size: 4.8rem;
+//             font-weight: bold;
+//             color: #fff;
+//             line-height: 167px;
+//             // transition: all $easeInOutExpo .4s;
+//             z-index: 1;
+//             position: relative;
+            
+//             &:before{
+//                 display: block;
+//                 content: '';
+//                 width: 0%;
+//                 height: 100%;
+//                 background-color: #333;
+//                 color: #333;
+//                 position: absolute;
+//                 top: 0;
+//                 right: 0;
+//                 // transition: all $easeInOutExpo .4s;
+//                 z-index: -1;
+//             }
+//         }
+        
+//         &:hover{
+                
+//             .contact-btn_ttl{
+        
+//                 &::before{
+//                     width: 100%;
+//                     left: 0;
+//                 }
+//             }
+//         }
+//     }
+
+//     @media screen and (max-width: 959px) {
+//         .contact-btn{
+//             height: 100px;
+   
+//             .contact-btn_ttl{
+//                 font-size: 3rem;
+//                 line-height: 100px;
+//             }
+//         }
+//     }
+// }

@@ -1,0 +1,208 @@
+// --- footer --------------------------------------------
+.footer{
+    margin-top: 140px;
+
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media screen and (max-width: 959px) {
+        .footer-content{
+            flex-direction: column-reverse;
+        }
+    }
+    @media screen and (max-width: 519px) {
+        
+    }
+
+    .access{
+        width: 50%;
+        .footer-logo{
+            width: 200px;
+        }
+        dl{
+            margin-top: 60px;
+            dt{
+                margin-top: 32px;
+                font-size: 2rem;
+                font-weight: bold;
+            }
+            dd{
+                margin-top: 10px;
+                margin-left: 15px;
+            }
+        }
+
+        @media screen and (max-width: 959px) {
+            margin-top: 80px;
+            width: 100%;
+
+            // .footer-logo{
+
+            // }
+        }
+        @media screen and (max-width: 519px) {
+            
+        }
+    }
+
+    .contact{
+        width: 50%;
+        
+        .contact-form{
+            
+            .section-contact{
+                font-size: 4.8rem;
+                letter-spacing: 0.2em;
+            }
+            .contact-para{
+                margin-top: 16px;
+            }
+        
+            form{
+                margin-top: 50px;
+                    
+                .form-contents{
+
+                    hr{
+                        border: none;
+                        // background-color: #ddd;
+                    }
+                    
+                    .form-list{
+                        margin-top: 5px;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+
+                        &:before{
+                            margin-bottom: 11px;
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 1px;
+                            background-color: #ddd;
+                        }
+
+                        .form-ttl{
+                            margin-left: 5px;
+                            position: relative;
+        
+                            .required{
+                                font-size: 2rem;
+                                color: $accentColor;
+                                position: absolute;
+                                right: -10px;
+                                top: -5px;
+                            }
+                        }
+                        .radio-list{
+                            width: 338/1440*100vw;
+                            
+                            li{
+                                margin-bottom: 3px;
+                                font-size: 1.3rem;
+                                letter-spacing: 0;
+                                
+                                .radio-btn{
+                                    margin: 0 5px 0 0;
+                                    width: 14px;;
+                                    height: 14px;
+                                    border-color: transparent;
+                                    border-radius: 50%;
+                                    background-color: #ddd;
+                                    outline: none;
+                                    appearance: none;
+                                    transition: ease .2s;
+                                    vertical-align: -2px;
+                                }
+                                .radio-btn:checked{
+                                    background-color: $accentColor;
+                                    box-shadow: 0 0 0 2px $bgc, 0 0 0 3px $accentColor;
+                                }
+                            } 
+                        }
+                        .form-detail{
+                            display: block;
+                            padding: 7px 7px;
+                            width: 338/1440*100vw;
+                            font-size: 1.6rem;
+                            outline: none;
+                            border: none;
+                            background-color: #ddd;
+                            box-sizing: border-box;
+                        }
+                        textarea{
+                            height: 150px;
+                        }  
+                    }
+                }
+
+                .more-btn_wrapp{
+                    width: 100%;
+                }
+            }
+        }
+
+        @media screen and (max-width: 959px) {
+            width: 100%;
+
+            .contact-form{
+                // .section-contact{
+
+                // }
+                // .contacy-para{
+
+                // }
+                form{
+                    .form-contents{
+                        .form-list{
+                            .radio-list{
+                                width: 70%;
+                            }
+                            .form-detail{
+                                width: 70%;
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+        @media screen and (max-width: 519px) {
+            .contact-form{
+                // .section-contact{
+
+                // }
+                // .contacy-para{
+
+                // }
+                form{
+                    .form-contents{
+                        .form-list{
+                            .radio-list{
+                                width: fit-content;
+                            }
+                            .form-detail{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright_wrapp{
+        margin-top: 72px;
+        margin-bottom: 70px;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+}
+
+// --- /footer --------------------------------------------
+

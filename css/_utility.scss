@@ -1,0 +1,223 @@
+$mainColor: #EEC95C;
+$accentColor: #D5514A;
+$textColor: #333;
+$bgc: #f1f1f1;
+$easing:  cubic-bezier(1, 0, 0, 1);
+$fadeIn: cubic-bezier(0.19,  1,     0.22,  1    );
+
+@font-face {
+    font-family: 'din-condensed';
+    src:
+    url('../fonts/DIN\ Condensed\ Bold.woff2') format('woff2'),
+    url('../fonts/DIN\ Condensed\ Bold.ttf') format('truetype');
+  }
+
+html{
+    font-size: 62.5%;
+}
+body{
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+    font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "palt";
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+    line-height: 1.75;
+    color: $textColor;
+    background-color: $bgc;
+    
+    @media screen and (max-width: 959px) {
+        font-size: 1.4rem;
+    }
+    @media screen and (max-width: 519px) {
+        // font-size: 1.2rem;
+    }
+}
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+a{
+    color: $mainColor;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.inner{
+    padding-left: ((150/1440)*100vw);
+    padding-right: ((150/1440)*100vw);
+    margin: 0 auto;
+
+    @media screen and (max-width: 959px){
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    
+    @media screen and (max-width: 519px) {
+        flex-direction: column;
+    }
+}
+
+// ===section title 共通デザイン＝＝＝
+.section-group{
+    margin-right: 30px;
+    height: 221px;
+    writing-mode: vertical-rl;
+    position: relative;
+    line-height: 1;
+    
+
+    &:after{
+        content: '';
+        background-image: url(../images/section-line.svg);
+        width: 60px;
+        height: 221px;
+        position: absolute;
+        top: 24px;
+        right: 0px;
+    }
+
+    .section_ttl{
+        margin-right: 15px;
+        font-size: 3.2rem;
+        text-align: right;
+        margin-bottom: 36px;
+        transition: $easing 1s;
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    .section_subttl{
+        font-size: 2rem;
+        letter-spacing: 0.3em;
+        transition: $easing 1s .2s;
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    @media screen and (max-width: 959px) {
+        // .section_ttl{
+        //     font-size: 2.4rem;
+        // }
+    }
+    @media screen and (max-width: 519px) {
+        margin-right: 0;
+        writing-mode: inherit;
+        // display: flex;
+        // flex-direction: column-reverse;
+        // align-items: flex-start;
+        height: 111px;
+
+        &:after{
+            background-size: cover;
+            width: 30px;
+            height: 111px;
+            // top: 70px;
+            // left: 50%;
+            // transform: translate(-50%, 0);
+            top: 0;
+            left: 0;
+        }
+
+        .section_ttl{
+            margin: 10px 0 0 35px;
+            font-size: 4.8rem;
+            // text-align: center;
+            text-align: left;
+        }
+        .section_subttl{
+            margin-top: 5px;
+            margin-left: 40px;
+            font-size: 1.5rem;
+            // text-align: center;
+            text-align: left;
+        }
+    }
+}
+
+.section-group.show{
+    .section_ttl, .section_subttl{
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+.news_section-group{
+    margin-right: 30px;
+    writing-mode: vertical-rl;
+    line-height: 1;
+
+    .news_section_ttl{
+        font-size: 3.2rem;
+        transition: $easing 1s;
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    @media screen and (max-width: 959px) {
+        // .section_ttl{
+        //     font-size: 3.8rem;
+        // }
+    }
+    @media screen and (max-width: 519px) {
+        .news_section_ttl{
+            font-size: 2.4rem;
+        }
+        .news_section_subttl{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.recruit_section-group{
+    text-align: center;
+
+    .recruit_section_ttl{
+        font-size: 3.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+
+        &:before{
+            margin-right: 1em;
+            display: block;
+            content: '';
+            width: 30vw;
+            height: 1px;
+            background-color: $textColor;
+        }
+        &:after{
+            margin-left: 1em;
+            display: block;
+            content: '';
+            width: 30vw;
+            height: 1px;
+            background-color: $textColor;
+        }
+
+        @media screen and (max-width: 959px) {
+
+        }
+        @media screen and (max-width: 519px) {
+            font-size: 3rem;
+        }
+    }
+}
+// ===/section title 共通デザイン＝＝＝
+
+
+
+
+// animation
+
+// .animationTarget{
+//     opacity: 0;
+//     transition: $easing .5s;
+// }
+// .show{
+//     opacity: 1;
+// }

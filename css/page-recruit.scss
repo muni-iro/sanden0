@@ -1,0 +1,461 @@
+@import "utility";
+@import "header-parts";
+@import "footer-parts";
+// @import "animation";
+@import "more-btn";
+
+.nav-recruit{
+    a{
+        &:after{
+            bottom: -5px !important;
+            opacity: 1 !important;
+        }
+    }
+}
+
+// ---recruit-mv--------------------------------------------
+.recruit-mv{
+    margin-top: 155px;
+    position: relative;
+
+    &_img-1{
+        width: 100vw;
+        height: 547px;
+        position: relative;
+
+        &:after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            // transform: translate(-50%, -50%) scale(1.6);
+            // width: 101%;
+            // height: 101%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background-image: url(../images/mv-recruit@2x.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            z-index: -10;
+        }
+    }
+
+    @media screen and (max-width: 959px) {
+        margin-top: 0;
+        padding-top: 100px;
+
+        // &_img-1{
+        //     height: 80vh;
+        // }
+    }
+    @media screen and (max-width: 519px) {
+        
+    }
+
+    &-copy{
+        font-size: 3.7rem;
+        font-weight: bold;
+        color: $mainColor;
+        letter-spacing: 0.2em;
+        white-space: nowrap;
+        writing-mode: vertical-rl;
+        position: absolute;
+        top: 20%;
+        // right: 150/1440*100vw;
+        right: 20%;
+
+
+        span{
+            padding: 6px;
+            position: relative;
+
+            &:after{
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                position: absolute;
+                top: 50%;
+                transform: translate(0, -50%);
+                z-index: -1;
+            }
+        }
+
+        @media screen and (max-width: 959px) {
+            top: 35%;
+            right: 10%;
+            // font-size: 4.8rem;
+        }
+        @media screen and (max-width: 519px) {
+            top: 35%;
+            right: 5%;
+            // writing-mode: vertical-rl;
+            // font-size: 4rem;
+            // top: auto;
+            // bottom: 50px;
+
+            // span{
+            //     &:after{
+            //         display: none;
+            //     }
+            // }
+
+        }
+    }
+
+    // @media screen and (max-width: 959px) {
+    //     padding-top: 100px;
+    //     margin-top: 0;
+    // }
+}
+
+// ---/rectuit-mv--------------------------------------------
+
+// --- greeting --------------------------------------------
+.greeting{
+    margin-top: 60px;
+
+    .director{
+        font-size: 2.4rem;
+        font-weight: bold;
+    }
+    .director-name{
+        font-size: 1.4rem;
+    }
+    .director-message{
+        margin-top: 30px;
+        width: 713/1440*100vw;
+        letter-spacing: 0.2em;
+    }
+
+
+    @media screen and (max-width: 959px) {
+        .director-message{
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 519px) {
+        
+    }
+}
+
+// // --- /about --------------------------------------------
+
+// // --- elements  --------------------------------------------
+.elements{
+    margin-top: 120px;
+
+    .elements-content{
+        margin-top: 60px;
+
+        &_figures_wrapp{
+            display: flex;
+            justify-content: center;
+
+            .elements-content_figures{
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+                width: 420/1440*100vw;
+                height: 240/1440*100vw;
+                color: $bgc;
+                background-color: $accentColor;
+                position: relative;
+
+                dt{
+                    position: absolute;
+                    bottom: 10%;
+                }
+                
+                dd{
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-family: 'din-condensed';
+                    font-size: 120/1440*100vw;
+
+                    span{
+                        font-size: 2.4rem;
+                    }
+                }
+
+                &:nth-of-type(2){
+                    margin-left: 40/1440*100vw;
+                }
+            }
+
+            @media screen and (max-width: 959px) {
+        
+                .elements-content_figures{
+                    width: calc(50% - 10px);
+                    height: 30vw;
+    
+                    dt{
+                        bottom: 20%;
+                    }
+                    
+                    dd{
+                        font-size: 10rem;
+    
+                        span{
+                            font-size: 2rem;
+                        }
+                    }
+    
+                    &:nth-of-type(2){
+                        margin-left: 20px;
+                    }
+                }
+            }
+            @media screen and (max-width: 519px) {
+                flex-direction: column;
+
+                .elements-content_figures{
+                    width: 100%;
+                    height: 200px;
+    
+                    dt{
+                        bottom: 10%;
+                    }
+    
+                    &:nth-of-type(2){
+                        margin-top: 20px;
+                        margin-left: 0px;
+                    }
+                }
+            }
+        }
+
+        &_ratio_wrapp{
+            margin: 80px auto 0;
+            width: 880/1440*100vw;
+
+            .elements-content_ratio{
+                margin-top: 40px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                
+                dt{
+                    margin-right: 10px;
+                    width: 110px;
+                    line-height: 1;
+                    // white-space: nowrap;
+                }
+                
+                dd{
+                    display: flex;
+                    width: 100%;
+                    height: 32px;
+                }
+            }
+
+            @media screen and (max-width: 959px) {
+                margin: 80px auto 0;
+                width: 100%;
+
+                // .elements-content_ratio{
+                    // margin-top: 40px;
+                    
+                    // dt{
+                        // margin-right: 10px;
+                        // width: 110px;
+                    // }
+                    
+                    // dd{
+                        // display: flex;
+                        // width: 100%;
+                        // height: 32px;
+                    // }
+                // }
+            }
+            @media screen and (max-width: 519px) {
+
+                .elements-content_ratio{
+                    // margin-top: 40px;
+                    flex-direction: column;
+                    
+                    dd{
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            @mixin ratioLine($width, $opa, $content){
+                width: $width;
+                height: 10px;
+                background: rgba($accentColor, $opa);
+
+                &:after{
+                    display: block;
+                    margin-top: 15px;
+                    content: $content;
+                    font-size: 1rem;
+                }
+            }
+            
+            .sex{
+                .male{
+                    @include ratioLine(90%, 1, '男性');
+                }
+                .female{
+                    @include ratioLine(10%, 0.5, '女性');
+                }
+            }
+            .age{
+                .over-21{
+                    @include ratioLine(3/13*100%, 1, '21〜30歳');
+                }
+                .over-31{
+                    @include ratioLine(4/13*100%, 0.8, '31〜40歳');
+                }
+                .over-41{
+                    @include ratioLine(3/13*100%, 0.6, '41〜50歳');
+                }
+                .over-51{
+                    @include ratioLine(2/13*100%, 0.4, '51〜60歳');
+                }
+                .over-61{
+                    @include ratioLine(1/13*100%, 0.2, '60〜');
+                }
+            }
+            .serve{
+                .over-0{
+                    @include ratioLine(2/13*100%, 1, '21〜30歳');
+                }
+                .over-4{
+                    @include ratioLine(3/13*100%, 0.8, '31〜40歳');
+                }
+                .over-6{
+                    @include ratioLine(2/13*100%, 0.6, '41〜50歳');
+                }
+                .over-11{
+                    @include ratioLine(6/13*100%, 0.4, '51〜60歳');
+                }
+            }
+        }
+    }
+
+    
+}
+// // --- /elements  --------------------------------------------
+
+// // --- slogan --------------------------------------------
+.slogan{
+    // overflow: hidden;
+    margin-top: 120px;
+
+    &-contents{
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 959px) {
+            flex-direction: column;
+        }
+        @media screen and (max-width: 519px) {
+            
+        }
+
+        ul{ 
+            width: 620/1440*100vw;
+
+            li{
+                &:not(:first-of-type){
+                    margin-top: 60px;
+                }
+
+                h3{
+                    margin-left: 24px;
+                    font-size: 2.4rem;
+                    font-weight: bold;
+                    letter-spacing: 0.1em;
+                    position: relative;
+
+                    &:before{
+                        // display: inline-block;
+                        content: '';
+                        width: 14px;
+                        height: 14px;
+                        background-color: $accentColor;
+                        position: absolute;
+                        top: 12px;
+                        left: -24px;
+                        // transform: translateY(-50%);
+                    }
+                }
+                p{
+                    margin-top: 20px;
+                    margin-left: 50/1440*100vw;
+                }
+
+            }
+
+            @media screen and (max-width: 959px) {
+                width: 100%;
+            }
+            @media screen and (max-width: 519px) {
+                
+            }
+        }
+
+        figure{
+            margin-top: 15px;
+            margin-right: -150/1440*100vw;
+            width: 650/1440*100vw;
+            // height: 650/1440*100vw;
+            // height: fit-content;
+            align-self: auto;
+            overflow: hidden;
+
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+
+            @media screen and (max-width: 959px) {
+                margin-top: 60px;
+                margin-left: -5vw;
+                width: 100vw;
+                height: 300px;
+                
+            }
+            @media screen and (max-width: 519px) {
+                
+            }
+        }
+    }
+}
+// // --- /slogan --------------------------------------------
+
+.recruit-message{
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    font-size: 3rem;
+    font-weight: bold;
+    // white-space: nowrap;
+    background-image: linear-gradient(90deg, $accentColor 50%, transparent 50%);
+    background-size: 200% 40%;
+    background-position: 100% bottom;
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
+    transition: $easing .4s;
+
+    @media screen and (max-width: 959px) {
+        margin-top: 80px;
+        font-size: 2.4rem;
+        background:none;
+    }
+    @media screen and (max-width: 519px) {
+        font-size: 2rem;
+    }
+}
+.is-fixed{//このクラスがつくと、下線が出現する
+    background-position: 0 bottom;
+}

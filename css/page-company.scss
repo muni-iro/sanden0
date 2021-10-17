@@ -1,0 +1,194 @@
+@import "utility";
+@import "header-parts";
+@import "footer-parts";
+@import "service-parts";
+@import "recruit-parts";
+// @import "animation";
+@import "more-btn";
+
+.nav-company{
+    a{
+        &:after{
+            bottom: -5px !important;
+            opacity: 1 !important;
+        }
+    }
+}
+
+// --- greeting --------------------------------------------
+.greeting{
+    padding-top: 250px;
+    
+    .greeting-message{
+        margin: 30px auto 0;
+        width: 687px;
+        letter-spacing: 0.2em;
+    }
+    .director-wrapp{
+        display: flex;
+        align-items: flex-end;
+        width: fit-content;
+        margin-right: 60/1440*100vw;
+        margin-left: auto;
+        
+        .director-name{
+            margin-left: 20px;
+            width: 212px;
+        }
+    }
+
+    @media screen and (max-width: 959px) {
+        padding-top: 200px;
+        .greeting-message{
+            margin: 0;
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 519px) {
+        padding-top: 150px;
+
+        .director-wrapp{
+            margin-top: 40px;
+            margin-right: auto;
+            margin-left: 0;
+            width: 100%;
+            flex-direction: column;
+            
+            .director-name{
+                margin-top: 10px;
+                margin-left: auto;
+                margin-right: 0;
+                width: 150px;
+            }
+        }
+    }
+}
+// --- /greeting --------------------------------------------
+
+// --- content-list 汎用 --------------------------------------------
+.content-list{
+    dl{
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        
+        .dl_inner{
+            margin-top: 30px;
+            display: flex;
+        }
+        dt{
+            font-weight: bold;
+            text-align: right;
+        }
+        dd{
+            margin-left: 60px;
+            white-space: nowrap;
+        }
+
+        .dd-detail{
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
+            
+            dt{
+                text-align: left;
+            }
+            dd{
+                margin-left: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: 959px) {
+        overflow: scroll;
+        dl{
+            dd{
+                margin-left: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: 519px) {
+
+    }
+    
+}
+// --- /content-list 汎用 --------------------------------------------
+
+// --- company --------------------------------------------
+.company{
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    .inner{
+        display: flex;
+
+        @media screen and (max-width: 959px) {
+            padding-right: 0;
+        }
+        @media screen and (max-width: 519px) {
+
+        }
+    }
+
+    &-content{
+        width: 100%;
+
+        dt{
+            width: 185px;
+
+            @media screen and (max-width: 959px) {
+                width: 130px;
+            }
+            @media screen and (max-width: 519px) {
+                
+            }
+        }
+    }
+
+
+}
+// --- /company --------------------------------------------
+
+// --- history --------------------------------------------
+.history{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: #fff;
+    background-color: $textColor;
+
+    .inner{
+        display: flex;
+
+        @media screen and (max-width: 959px) {
+            padding-right: 0;
+        }
+        @media screen and (max-width: 519px) {
+
+        }
+    }
+
+    &-content{
+        width: 100%;
+
+        .dl_inner{
+            dt{
+                width: 70px;
+
+                @media screen and (max-width: 959px) {
+                    width: 55px;
+                }
+                @media screen and (max-width: 519px) {
+        
+                }
+            }
+            span{
+                color: $mainColor;
+            }
+        }
+
+    }
+}
+// --- /history --------------------------------------------
+
+
+
